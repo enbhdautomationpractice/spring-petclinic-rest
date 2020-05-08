@@ -183,4 +183,21 @@ For pull requests, editor preferences are available in the [editor config](https
 
 
 
+## How to build the Docker container
+
+spring-petclinic-rest$ mvn clean install
+spring-petclinic-rest$ docker build -t enbhdautomationpractice/spring-petclinic-rest . 
+spring-petclinic-rest$ docker push enbhdautomationpractice/spring-petclinic-rest
+
+## How to deploy the Docker container
+
+1. Create network for Petclinic application
+- docker network create spring_petclinic_network
+
+2. Create the spring-petclinic-rest image and run it:
+- docker run -d --restart unless-stopped --name spring-petclinic-rest --network=spring_petclinic_network -p 8082:8082 enbhdautomationpractice/spring-petclinic-rest
+   
+3. How to test?
+- Browse to: http://35.157.38.212:8082/petclinic/ or 
+- Browse to: http://35.157.38.212:8082/petclinic/api/owners
 
