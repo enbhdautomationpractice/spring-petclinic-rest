@@ -183,11 +183,11 @@ For pull requests, editor preferences are available in the [editor config](https
 
 
 
-## How to build the Docker container
+## How to build the Docker container and push it to Docker Hub
 
-spring-petclinic-rest$ mvn clean install
-spring-petclinic-rest$ docker build -t enbhdautomationpractice/spring-petclinic-rest . 
-spring-petclinic-rest$ docker push enbhdautomationpractice/spring-petclinic-rest
+- mvn clean install
+- docker build -t enbhdautomationpractice/spring-petclinic-rest . 
+- docker push enbhdautomationpractice/spring-petclinic-rest
 
 ## How to deploy the Docker container
 
