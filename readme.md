@@ -191,13 +191,13 @@ For pull requests, editor preferences are available in the [editor config](https
 
 ## How to deploy the Docker container
 
-1. Create network for Petclinic application
+##### Create network for Petclinic application
 - docker network create spring_petclinic_network
 
-2. Create the spring-petclinic-rest image and run it:
+##### Create the spring-petclinic-rest image and run it:
 - docker run -d --restart unless-stopped --name spring-petclinic-rest --network=spring_petclinic_network -p 8082:8082 enbhdautomationpractice/spring-petclinic-rest
    
-3. How to test?
-- Browse to: http://35.157.38.212:8082/petclinic/ or 
-- Browse to: http://35.157.38.212:8082/petclinic/api/owners
+##### How to test?
+- Browse to: http://<IP_address>:8082/petclinic/
+- Browse to: http://<IP_address>:8082/petclinic/api/owners
 
